@@ -13,25 +13,20 @@ const { mongodbConnect } = require("../databases/mongodb/mongodbConnect");
 const { connectRedis } = require("../databases/redis/redisJwt");
 const useragent = require("express-useragent");
 
-// --- SỬA LẠI TẠI ĐÂY ---
-// Gộp tất cả URL được phép vào một mảng
+// test
 const allowedOrigins = [
   'https://coffee-kimphu-angular-kimphu111s-projects.vercel.app', // URL cũ
   'https://coffee-kimphu-angular.vercel.app', // Vercel (Production)
   'http://localhost:4200',                                      // Local
   'http://127.0.0.1:4200'                                       // Local
 ];
-// --- KẾT THÚC SỬA ---
-
-// test
-
 // config
 require("express-async-handler");
 
 // init middlewares
 app.use(
   cors({
-    origin: allowedOrigins, // <-- GÁN MẢNG ĐÃ SỬA VÀO ĐÂY
+    origin: ["http://localhost:4200", "http://127.0.0.1:4200"],allowedOrigins,
     credentials: true, // Cho phép gửi và nhận cookie
   })
 );
