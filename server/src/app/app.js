@@ -16,7 +16,8 @@ const useragent = require("express-useragent");
 // --- SỬA LẠI TẠI ĐÂY ---
 // Gộp tất cả URL được phép vào một mảng
 const allowedOrigins = [
-  'https://coffee-kimphu-angular-kimphu111s-projects.vercel.app', // Vercel (Production)
+  'https://coffee-kimphu-angular-kimphu111s-projects.vercel.app', // URL cũ
+  'https://coffee-kimphu-angular.vercel.app', // Vercel (Production)
   'http://localhost:4200',                                      // Local
   'http://127.0.0.1:4200'                                       // Local
 ];
