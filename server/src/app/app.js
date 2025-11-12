@@ -13,7 +13,7 @@ const { mongodbConnect } = require("../databases/mongodb/mongodbConnect");
 const { connectRedis } = require("../databases/redis/redisJwt");
 const useragent = require("express-useragent");
 
-const allowedOrigins = ['https://cafiora-dalt.vercel.app'];
+const allowedOrigins = ['https://coffee-kimphu-angular-kimphu111s-projects.vercel.app'];
 // test
 
 // config
