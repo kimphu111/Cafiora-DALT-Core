@@ -13,6 +13,7 @@ const { mongodbConnect } = require("../databases/mongodb/mongodbConnect");
 const { connectRedis } = require("../databases/redis/redisJwt");
 const useragent = require("express-useragent");
 
+const allowedOrigins = ['https://cafiora-dalt.vercel.app'];
 // test
 
 // config
@@ -21,7 +22,7 @@ require("express-async-handler");
 // init middlewares
 app.use(
   cors({
-    origin: ["http://localhost:4200", "http://127.0.0.1:4200"],
+    origin: ["http://localhost:4200", "http://127.0.0.1:4200"], allowedOrigins,
     credentials: true, // Cho phép gửi và nhận cookie
   })
 );
